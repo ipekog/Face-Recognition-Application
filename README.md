@@ -1,5 +1,5 @@
 # Face-Recognition-Application
-A Face Recognition Application made in Pycharm[^1]
+A Face Recognition Project made in Pycharm[^1]
 
   - created using libraries face_recognition, tkinter, opencv, etc.
   
