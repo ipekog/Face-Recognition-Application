@@ -6,11 +6,10 @@ import os
 from simple_facerec import SimpleFacerec
 
 # Variables
+cam = FALSE
 scan = FALSE
 snapshot = FALSE
 unknown = TRUE
-i = 0
-
 
 root = Tk()
 root.title("Face Recognition Application")
@@ -58,7 +57,7 @@ instruction3.grid(row=1, column=2, columnspan=2)
 instruction4 = Label(root, text="Please write your name", font=("Montserrat", 20), bg="#C0D0D8", fg="#30424B")
 instruction4.grid(row=3, column=2, sticky=N, columnspan=2)
 
-# Empty string for entry box
+# Empty string for possible warnings
 text5 = StringVar()
 instruction5 = Label(root, textvariable=text5, font=("Montserrat", 10), bg="#C0D0D8", fg="#30424B")
 text5.set("")
@@ -123,6 +122,8 @@ input_box.grid(row=3, column=2, columnspan=2)
 # in this the method there are; snapshot, scan and scan off  features
 # every action needs to be done when the camera is open !
 def open_cam():
+   global cam
+   cam = TRUE
    camera_w = Label(cam_w)
    camera_w.grid(row=2, column=0)
 
@@ -132,6 +133,8 @@ def open_cam():
    '''
 
    cap = cv2.VideoCapture(0)
+
+   text5.set("Please first check whether you are in the system or not by clicking 'Scan On'")
 
    # displaying the frames of the cpatured video
    def show_frames():
@@ -146,6 +149,7 @@ def open_cam():
       cv2image = cv2.cvtColor(cap.read()[1], cv2.COLOR_BGR2RGB)
 
       if scan == TRUE:     # If the user clicks the scan button (scan = TRUE) (the scan features activates)
+
          # Testing (unused code segment)
          '''faces = face_cascade.detectMultiScale(cv2image, 1.1, 4)
          for (x, y, w, h) in faces:
@@ -191,21 +195,36 @@ def open_cam():
 #end of method open_cam()
 
 # when clicked on the Scan On button -> scan = TRUE (we can go inside the if scan == TRUE: statement which activates the face recognition feature)
+# gives warning message if camera is not opened
 def scan_on():
    global scan
-   scan = TRUE
+   if cam == TRUE:
+      scan = TRUE
+   elif cam == FALSE:
+      text5.set("Please first open the camera ^^")
 #end of method scan_on()
 
 # when clicked on the Scan Off button -> scan = FALSE (we cannot go inside the if scan == TRUE: statement so the face recognition feature deactivates)
+# gives warning message if camera and scan features are not on
 def scan_off():
    global scan
-   scan = FALSE
+   if cam == TRUE:
+      if scan == TRUE:
+         scan = FALSE
+      elif scan == FALSE:
+         text5.set("Scan feature is already off.")
+   else:
+      text5.set("Please first open the camera ^^")
 #end of method scan_off()
 
 # when clicked on the Save button -> snapshot = TRUE (we can go inside the if snapshot == TRUE: statement which activates the click(cap) method to save the photo)
+# gives warning message if camera is not opened
 def snapshot_on():
    global snapshot
-   snapshot = TRUE
+   if cam == TRUE:
+      snapshot = TRUE
+   else:
+      text5.set("Please first open the camera and check whether you are in the system or not")
 # end of method snapshot_on()
 
 # method for saving the desired photo to the images file in the project
