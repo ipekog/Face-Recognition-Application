@@ -17,4 +17,4 @@ A Face Recognition Project[^1] made in Pycharm
     ![ss](https://user-images.githubusercontent.com/86734931/179744193-0c7a00b1-0901-4556-bd2a-2349fccfd87e.png)
 
     
-[^1]: Summer Internship Project (20 workday)
+[^1]: Summer Internship Project (20 workdays)
