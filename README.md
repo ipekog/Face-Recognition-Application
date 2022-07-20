@@ -36,5 +36,5 @@
 
 
 [^1]: Summer Internship Project (20 workdays)
-[^2]: Example image to simulate webcam display
-[^3]: Example name for user
+[^2]: Placeholder image to simulate webcam display
+[^3]: Placeholder name for user
