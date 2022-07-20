@@ -240,7 +240,7 @@ def click(cap):
 
    if input != "":
       img_name = "{}.jpg".format(input)
-      path = (r"C:\Users\IPEK\PycharmProjects\pythonProject3\images")
+      path = (r"C:\PycharmProjects\pythonProject3\images")
       cv2.imwrite(os.path.join(path, img_name), np.fliplr(frame))
       text5.set("{} is saved!".format(img_name))
    else:
