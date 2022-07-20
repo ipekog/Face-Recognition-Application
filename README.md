@@ -29,7 +29,7 @@
     
     ![saving](https://user-images.githubusercontent.com/86734931/179969415-93b98929-887c-44bc-b535-b72464269b78.png)
     
-    -<sub> when re-scanning the user after saving
+    - <sub> when re-scanning the user after saving
     
     ![scanning2](https://user-images.githubusercontent.com/86734931/179971721-632cc92a-cb31-4448-be4d-d8d8f7fcd709.png)
 
