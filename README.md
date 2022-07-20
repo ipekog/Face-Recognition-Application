@@ -19,7 +19,22 @@
     
     - <sub> when camera[^2] is opened
     
-    ![s](https://user-images.githubusercontent.com/86734931/179764318-e75f66cd-67e8-46ae-a2ef-02793995163f.png)
+    ![camera](https://user-images.githubusercontent.com/86734931/179969203-63cdd1ef-3dda-4b52-9abd-33b47243e69a.png)
+
+    - <sub> when scanning an unknonw face
+    
+    ![scanning](https://user-images.githubusercontent.com/86734931/179969253-a3fae733-ea40-44cf-94ff-744b02da4cfd.png)
+
+    - <sub> when saving the users face & name[^3] as .jpg
+    
+    ![saving](https://user-images.githubusercontent.com/86734931/179969415-93b98929-887c-44bc-b535-b72464269b78.png)
+    
+    -<sub> when re-scanning the user after saving
+    
+    ![scanning2](https://user-images.githubusercontent.com/86734931/179971721-632cc92a-cb31-4448-be4d-d8d8f7fcd709.png)
+
+
 
 [^1]: Summer Internship Project (20 workdays)
 [^2]: Example image to simulate webcam display
+[^3]: Example name for user
